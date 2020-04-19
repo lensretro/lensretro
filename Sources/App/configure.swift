@@ -17,15 +17,15 @@ public func configure(_ app: Application) throws {
         database: "lensretrodb"
     ), as: .psql)
     
-    try app.http.server.configuration.tlsConfiguration = .forServer(
-//        certificateChain: [
-//            .certificate(.init(
-//                file: "server.cert",
-//                format: .pem
-//            ))
-//        ],
-//        privateKey: .file("server.key")
-   )
+//    try app.http.server.configuration.tlsConfiguration = .forServer(
+////        certificateChain: [
+////            .certificate(.init(
+////                file: "server.cert",
+////                format: .pem
+////            ))
+////        ],
+////        privateKey: .file("server.key")
+//   )
 
     // Configure migrations
     app.migrations.add(User.Migration())
